@@ -1,15 +1,14 @@
 #!/usr/bin/env ruby
 
 require_relative 'radio'
+require_relative 'tuner'
 
-am_radio = Radio.am
-puts am_radio.freq_range
+radio = Radio.new(5)
+puts radio.to_s
 
-fm_radio = Radio.fm
-puts fm_radio.freq_range
+radio.volume = 9
+radio.tuner.freq = 99.9
+puts radio.to_s
 
-puts am_radio.to_s
-puts fm_radio.to_s
-
-fm_radio.volume = 11
-puts fm_radio.to_s
+radio.switch_band
+puts radio.to_s
