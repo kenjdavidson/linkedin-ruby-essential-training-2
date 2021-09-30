@@ -1,10 +1,10 @@
-require_relative 'nameable'
-require_relative 'person'
+require_relative 'classes/nameable'
+require_relative 'classes/person'
 
 ken = Person.new('Ken','Davidson')
 puts ken.full_name
 
-require_relative 'to_do_list'
+require_relative 'classes/to_do_list'
 
 list = ToDoList.new(['dishes','laundry','lawn','nap','beers'])
 
